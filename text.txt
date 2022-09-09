@@ -5,10 +5,7 @@ ajouter les nouveau fichier ou dossier
 git add * (nom fichier ou dossier)
 jouter les nouveau fichier ou dossier
 git add * (nom fichier ou dossier)jouter les nouveau fichier ou dossier
-git add * (nom fichier ou dossier)jouter les nouveau fichier ou dossier
-git add * (nom fichier ou dossier)jouter les nouveau fichier ou dossier
-git add * (nom fichier ou dossier)jouter les nouveau fichier ou dossier
-git add * (nom fichier ou dossier)
+
 
 
 
