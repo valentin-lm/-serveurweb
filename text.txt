@@ -1,0 +1,9 @@
+﻿choisier le dossier
+git init
+
+ajouter les nouveau fichier ou dossier
+git add * (nom fichier ou dossier)
+
+
+
+
