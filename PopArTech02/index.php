@@ -85,9 +85,10 @@
 				</div>
 			</section>
 
+		<!-- affichage base de donnée  -->
 		<section id="three" class="wrapper ">
 			<div class="inner">
-				<div id="three-Cosplay">
+
 					<h1>Programme Cosplay</h1>
 					<div class="row">
 						<div class="col">
@@ -105,28 +106,6 @@
 										<img class="img" src="images/pic01.jpg" alt="Pic 01">
 									</div>
 								</a>
-						</div>
-					<div id="three-jv">
-						<h1>Programme Jeux Vidéo</h1>
-						<div class="row">
-							<div class="col">
-								<img class="img-circle" src="images/pic01.jpg" alt="Pic 01" width="150" height="150">
-								<h3>Areliann</h3>
-								<p><a class="bouton-perso" href="#view-write-01" >Voir Plus</a></p>
-									<a href="#three-Cosplay" id="view-write-01">
-										<div class="text-descri">
-											<h2>Kiuqsxn</h2>
-											<p>
-												Kiuqsxn, streameur ayant commencé par les jeux FPS, il découvre le monde du RP il y a quelques mois qui devient pour lui une vraie passion.
-												<br><br>
-												Particulièrement connu pour son role de Pablo sur le serveur GTA RP "21 Jump Click", on peut le retrouver aussi bien de jour comme de nuit sur GTA, New World, F1 ou encore Rainbow Six Siege.
-											</p>
-											<img class="img" src="images/pic01.jpg" alt="Pic 01">
-										</div>
-									</a>
-							</div>
-						</div>
-					</div>
 			</div>
 		</section>
 		<section id="categorie">
@@ -166,12 +145,7 @@
 							<label for="email">Email</label>
 							<input type="email" name="email" class="form-control" placeholder="Email" required="required" autocomplete="off">
 						</div>
-						<!-- <div class="field half">
-							<label for="email">Description</label>
-							<input type="text" name="msg" class="form-control" placeholder="Description" required="required" autocomplete="off">
-						</div> -->
-
-						<!-- a mettre dans la base de donnée -->
+						<!-- a mettre dans la base de donnée image  -->
 
 						<ul class="actions">
 						<button type="submit" class="btn btn-primary btn-block">Inscription</button>
