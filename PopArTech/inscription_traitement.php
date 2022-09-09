@@ -1,7 +1,7 @@
 <?php
     require_once 'config.php'; // On inclu la connexion à la bdd
 
-    
+
     // Si les variables existent et qu'elles ne sont pas vides
     if(!empty($_POST['pseudo']) && !empty($_POST['email']))
     {
@@ -39,7 +39,7 @@
                                 'pseudo' => $pseudo,
                                 'email' => $email,
                                 'ip' => $ip,
-                                'token' => bin2hex(openssl_random_pseudo_bytes(64)) // a enlever a mettre la description
+                                'token' => bin2hex(openssl_random_pseudo_bytes(12)) // a enlever a mettre la description
                             ));
                             // On redirige avec le message de succès
                             header('Refresh: 3; index.php?reg_err=success');
