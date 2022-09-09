@@ -1,4 +1,5 @@
 <!DOCTYPE HTML>
+
 <?php
 							if(isset($_GET['reg_err']))
 							{
@@ -51,7 +52,6 @@
 	templated.co @templatedco
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 -->
-
 <html>
 	<head>
 		<title>PopExpo</title>
