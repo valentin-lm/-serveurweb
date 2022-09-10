@@ -61,106 +61,143 @@
 		<link rel="stylesheet" href="assets/css/style.css" />
 	</head>
 	<body>
-		<!-- Header -->
-			<header id="header">
-				<div class="inner">
-					<a href="index.php" class="logo">PopExpo</a>
-					<nav id="nav">
-						<a href="#three-Cosplay">Programme Cosplay</a>
-						<a href="#three-jv">Programme Jeux Vidéo</a>
-						<a href="#categorie">Concour et Trounoir</a>
-						<a href="#footer">Inscription</a>
-					</nav>
-					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
-				</div>
-			</header>
 
-		<!-- Banner -->
-			<section id="banner">
-				<div class="inner">
-					<header>
-						<h1>PopExpo 2022</h1>
-						<h3>Faisons un ensemble !</h3>
-					</header>
-				</div>
-			</section>
-
-		<!-- affichage base de donnée  -->
-		<section id="three" class="wrapper ">
+	<!-- Header -->
+		<header id="header">
 			<div class="inner">
+				<a href="index.php" class="logo">PopExpo</a>
+				<nav id="nav">
+					<a href="#three">Inscrit</a>
+					<a href="#acticle">Acticle</a>
+					<a href="#regle">Information et réglement</a>
+					<a href="#footer">Inscription</a>
+				</nav>
+				<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+			</div>
+		</header>
 
-					<h1>Programme Cosplay</h1>
-					<div class="row">
-						<div class="col">
-							<img class="img-circle" src="images/pic01.jpg" alt="Pic 01" width="150" height="150">
-							<h3>Areliann</h3>
-							<p><a class="bouton-perso" href="#view-write-01" >Voir Plus</a></p>
-								<a href="#three-Cosplay" id="view-write-01">
-									<div class="text-descri">
-										<h2>Kiuqsxn</h2>
-										<p>
-											Kiuqsxn, streameur ayant commencé par les jeux FPS, il découvre le monde du RP il y a quelques mois qui devient pour lui une vraie passion.
-											<br><br>
-											Particulièrement connu pour son role de Pablo sur le serveur GTA RP "21 Jump Click", on peut le retrouver aussi bien de jour comme de nuit sur GTA, New World, F1 ou encore Rainbow Six Siege.
-										</p>
-										<img class="img" src="images/pic01.jpg" alt="Pic 01">
-									</div>
-								</a>
+	<!-- Banner -->
+		<section id="banner">
+			<div class="inner">
+				<header>
+					<h1>PopExpo 2022</h1>
+					<h3>Faisons un ensemble !</h3>
+				</header>
 			</div>
 		</section>
-		<section id="categorie">
-			<div class="categorie-col">
-				<div>
-					<h1>Cosplay</h1>
-					<h3>Description</h3>
-					<p>
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque nesciunt enim consequatur molestiae? Ex, beatae aut. Eaque, quia ipsa quo adipisci fugiat fuga, corporis quam ut at aliquam dolorum nostrum?<br><br>
-						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid magni at necessitatibus tenetur nisi explicabo assumenda repellendus aut dolorum molestias, et quis, modi porro eveniet veritatis a aspernatur. Ea, distinctio! <br><br>
-						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium debitis earum consectetur minus tempore harum consequatur et. Quis voluptas non neque consectetur sit? Veritatis praesentium officiis saepe accusamus consectetur commodi?
-						</p>
+
+	<!-- Acticle -->
+		<section id="acticle">
+			<div class="album py-5 bg-light">
+				<div class="container">
+					<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+						<div class="col">
+							<div class="card shadow-sm">
+								<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+								<div class="card-body">
+									<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+									<div class="d-flex justify-content-between align-items-center">
+										<div class="btn-group">
+											<button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+										</div>
+										<small class="text-muted">9 mins</small>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
-				<div>
-					<h1>Jeux Vidéo</h1>
-					<h3>Description</h3>
-					<p>
-					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque nesciunt enim consequatur molestiae? Ex, beatae aut. Eaque, quia ipsa quo adipisci fugiat fuga, corporis quam ut at aliquam dolorum nostrum?<br><br>
-					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid magni at necessitatibus tenetur nisi explicabo assumenda repellendus aut dolorum molestias, et quis, modi porro eveniet veritatis a aspernatur. Ea, distinctio! <br><br>
-					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium debitis earum consectetur minus tempore harum consequatur et. Quis voluptas non neque consectetur sit? Veritatis praesentium officiis saepe accusamus consectetur commodi?
-					</p>
-				</div>
-			  </div>
+			</div>
 		</section>
-		<!-- Footer -->
-			<footer id="footer">
-				<div class="inner">
 
-					<h3>Inscription</h3>
-					<form action="inscription_traitement.php" method="post">
+	<!-- Reglement -->
+		<section id="regle">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<h2>titre 1</h2>
+						<p>Desption reglement</p>
+					</div>
+					<div class="col">
+						<h2>titre 2</h2>
+						<p>Desption reglement</p>
+					</div>
+					<div class="col">
+						<h2>titre 3</h2>
+						<p>Desption reglement</p>
+					</div>
+				</div>
+			</div>
+		</section>
 
-						<div class="field half first">
-							<label for="name">Pseudo</label>
-							<input type="text" name="pseudo" id="name" class="form-control" placeholder="Pseudo" required="required" autocomplete="off">
+	<!-- affichage base de donnée  -->
+		<section id="three" class="wrapper ">
+			<div class="inner">
+				<h1>Inscrit</h1>
+				<div class="row">
+					<div class="col">
+						<img class="img-circle" src="images/pic01.jpg" alt="Pic 01" width="150" height="150">
+						<h3>Areliann</h3>
+						<p><a class="bouton-perso" href="#view-write-01" >Voir Plus</a></p>
+							<a href="#three-Cosplay" id="view-write-01">
+								<div class="text-descri">
+									<h2>Kiuqsxn</h2>
+									<p>
+										Kiuqsxn, streameur ayant commencé par les jeux FPS, il découvre le monde du RP il y a quelques mois qui devient pour lui une vraie passion.
+									</p>
+									<img class="img" src="images/pic01.jpg" alt="Pic 01">
+								</div>
+							</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	<!-- Footer -->
+		<footer id="footer">
+			<div class="inner">
+				<h3>Inscription</h3>
+				<form action="inscription_traitement.php" method="post">
+					<div class="field half first">
+						<label for="name">Pseudo</label>
+						<input type="text" name="pseudo" class="form-control" placeholder="Pseudo" required="required" autocomplete="off">
+					</div>
+					<div class="field half">
+						<label for="email">Email</label>
+						<input type="email" name="email" class="form-control" placeholder="Email" required="required" autocomplete="off">
+					</div>
+					<div class="row">
+						<div class="col-8">
+							<label for="message">Description</label>
+							<textarea type="message" name="message"  required="required" placeholder="..."></textarea>
 						</div>
-						<div class="field half">
-							<label for="email">Email</label>
-							<input type="email" name="email" class="form-control" placeholder="Email" required="required" autocomplete="off">
+						<div class="col-4">
+							<label for="file" class="label-file">Choisir une image</label>
+							</label>
+							<input type="file" name="image" accept=".jpg, .jpeg, .png">
 						</div>
-						<!-- a mettre dans la base de donnée image  -->
+					</div>
+					<div class="field ">
 
-						<ul class="actions">
-						<button type="submit" class="btn btn-primary btn-block">Inscription</button>
-						</ul>
+					</div>
+					<div class="field ">
 
-					</form>
-
-					<div class="copyright">
-						&copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com">Unsplash</a>.
 					</div>
 
-				</div>
-			</footer>
-		<!-- Scripts -->
+					<!--
+						Ajout des image et image default
+						Description
+						Envoie de mail avec tout les information renseigner
+					 -->
+					<ul class="actions">
+						<button type="submit" class="btn btn-primary btn-block">Inscription</button>
+					</ul>
+				</form>
 
-<-->
+				<div class="copyright">
+					<a>&copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com">Unsplash</a>.
+				</div>
+			</div>
+		</footer>
 	</body>
 </html>
