@@ -34,7 +34,6 @@
 
                             move_uploaded_file($tmp_dir, $upload_dir.$picProfile);
 
-
                             // On insère dans la base de données
                             $insert = $bdd->prepare('INSERT INTO utilisateurs(pseudo, email, ip, token, img) VALUES(:pseudo, :email, :ip, :token, :img)');
                             $insert->execute(array(
