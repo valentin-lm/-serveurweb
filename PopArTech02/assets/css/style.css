@@ -990,12 +990,6 @@
 		font-size: 1.8em;
 		padding-top: 1em;
 	}
-	.wrapper a:hover{
-		text-decoration: none;
-		width: auto;
-		height: auto;
-		color: #000;
-	}
 	.center{
 		align-content: center;
 	}
@@ -1005,23 +999,24 @@
 	.text-descri{
 		background-color: #FFF;
 	}
-	#view-write-01, #view-write-02, #view-write-03{
+	.test{
   		position: fixed;
 		display: none;
 		top: 0;
 		width: 100%;
 		height: 100%;
 		z-index: 10006;
+		background-color: #FFf;
 	}
 	.img{
 		left: 0;
-		margin: 0 25%;
-		width: 45em;
+		margin: 0 15%;
+		width: 60em;
 		opacity: 40%;
 		box-shadow: 5px 0px 2px #000, -5px 0pc 2px #000;
 	}
 
-	#view-write-01 h2, #view-write-02 h2, #view-write-03 h2{
+	.test h2{
 		position: absolute;
 		width: 100%;
 		margin-top: 2.5em;
@@ -1031,7 +1026,7 @@
 		font-weight: 900;
 		text-transform: uppercase;
 	}
-	#view-write-01 p, #view-write-02 p, #view-write-03 p{
+	.test p{
 		position:absolute;
 		margin: 15em;
 		text-align: center;
@@ -1039,7 +1034,7 @@
 	}
 
 
-	#view-write-01:target, #view-write-02:target, #view-write-03:target {
+	.test:target {
 		display: block;
 	  }
 

@@ -1,52 +1,61 @@
 <!DOCTYPE HTML>
 
 <?php
-							if(isset($_GET['reg_err']))
-							{
-								$err = htmlspecialchars($_GET['reg_err']);
+	require_once 'config.php'; // On inclu la connexion à la bdd
 
-								switch($err)
-								{
-									case 'success':
-									?>
-										<div class="alert alert-success">
-											<strong>Succès</strong> inscription réussie !
-										</div>
-									<?php
-									break;
+		if(isset($_GET['reg_err']))
+		{
+			$err = htmlspecialchars($_GET['reg_err']);
 
-									case 'email':
-									?>
-										<div class="alert alert-danger">
-											<strong>Erreur</strong> email non valide
-										</div>
-									<?php
-									break;
+			switch($err)
+			{
+				case 'success':
+				?>
+					<div class="alert alert-success">
+						<strong>Succès</strong> inscription réussie !
+					</div>
+				<?php
+				break;
+				case 'msg_length':
+				?>
+					<div class="alert alert-danger">
+						<strong>Erreur</strong>message trop long
+					</div>
+				<?php
+				break;
 
-									case 'email_length':
-									?>
-										<div class="alert alert-danger">
-											<strong>Erreur</strong> email trop long
-										</div>
-									<?php
-									break;
+				case 'email':
+				?>
+					<div class="alert alert-danger">
+						<strong>Erreur</strong> email non valide
+					</div>
+				<?php
+				break;
 
-									case 'pseudo_length':
-									?>
-										<div class="alert alert-danger">
-											<strong>Erreur</strong> pseudo trop long
-										</div>
-									<?php
-									case 'already':
-									?>
-										<div class="alert alert-danger">
-											<strong>Erreur</strong> incription deja existant
-										</div>
-									<?php
+				case 'email_length':
+				?>
+					<div class="alert alert-danger">
+						<strong>Erreur</strong> email trop long
+					</div>
+				<?php
+				break;
 
-								}
-							}
-							?>
+				case 'pseudo_length':
+					?>
+						<div class="alert alert-danger">
+							<strong>Erreur</strong> pseudo trop long
+						</div>
+					<?php
+				case 'already':
+				?>
+					<div class="alert alert-danger">
+						<strong>Erreur</strong> incription deja existant
+					</div>
+				<?php
+
+			}
+		}
+?>
 
 
 <!--
@@ -137,20 +146,31 @@
 			<div class="inner">
 				<h1>Inscrit</h1>
 				<div class="row">
-					<div class="col">
-						<img class="img-circle" src="images/pic01.jpg" alt="Pic 01" width="150" height="150">
-						<h3>Areliann</h3>
-						<p><a class="bouton-perso" href="#view-write-01" >Voir Plus</a></p>
-							<a href="#three-Cosplay" id="view-write-01">
-								<div class="text-descri">
-									<h2>Kiuqsxn</h2>
-									<p>
-										Kiuqsxn, streameur ayant commencé par les jeux FPS, il découvre le monde du RP il y a quelques mois qui devient pour lui une vraie passion.
-									</p>
-									<img class="img" src="images/pic01.jpg" alt="Pic 01">
-								</div>
-							</a>
-					</div>
+					<?php
+						$stmt=$bdd->prepare('SELECT * FROM utilisateurs ORDER BY id DESC');
+						$stmt->execute();
+						if($stmt->rowCount()>0)
+						{
+							while($row=$stmt->fetch(PDO::FETCH_ASSOC))
+							{
+								extract($row);
+								?>
+									<div class="col">
+										<img class="img-circle" src="./images/<?php echo $row['img']?>" alt="Pic 01" width="150" height="150">
+										<h3><?php echo $row['pseudo']?></h3>
+										<p><a class="bouton-perso" href="#view-write-<?php echo $row['token']?>">Voir Plus</a></p>
+											<a class="test"  id="view-write-<?php echo $row['token']?>" href="#three">
+												<div class="text-descri"></div>
+													<h2><?php echo $row['pseudo']?></h2>
+													<p><?php echo $row['msg']?></p>
+													<img class="img" src="./images/<?php echo $row['img']?>" alt="Pic 01">
+												</div>
+											</a>
+									</div>
+								<?php
+							}
+						}
+					?>
 				</div>
 			</div>
 		</section>
@@ -159,7 +179,7 @@
 		<footer id="footer">
 			<div class="inner">
 				<h3>Inscription</h3>
-				<form action="inscription_traitement.php" method="post">
+				<form action="inscription_traitement.php" method="post" enctype="multipart/form-data">
 					<div class="field half first">
 						<label for="name">Pseudo</label>
 						<input type="text" name="pseudo" class="form-control" placeholder="Pseudo" required="required" autocomplete="off">
@@ -175,15 +195,8 @@
 						</div>
 						<div class="col-4">
 							<label for="file" class="label-file">Choisir une image</label>
-							</label>
-							<input type="file" name="image" accept=".jpg, .jpeg, .png">
+							<input type="file" name="profile" accept=".jpg, .jpeg, .png">
 						</div>
-					</div>
-					<div class="field ">
-
-					</div>
-					<div class="field ">
-
 					</div>
 
 					<!--
