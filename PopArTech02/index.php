@@ -198,14 +198,8 @@
 							<input type="file" name="profile" accept=".jpg, .jpeg, .png">
 						</div>
 					</div>
-
-					<!--
-						Ajout des image et image default
-						Description
-						Envoie de mail avec tout les information renseigner
-					 -->
 					<ul class="actions">
-						<button type="submit" class="btn btn-primary btn-block">Inscription</button>
+						<button type="submit" class="btn btn-primary btn-block">Envoier</button>
 					</ul>
 				</form>
 

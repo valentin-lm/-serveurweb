@@ -7,6 +7,7 @@
         // Patch XSS
         $pseudo = htmlspecialchars($_POST['pseudo']);
         $email = htmlspecialchars($_POST['email']);
+        $subject ="Demander d'inscription a PopArTech";
         $msg = htmlspecialchars($_POST['message']);
         $images=$_FILES['profile']['name'];
         $tmp_dir=$_FILES['profile']['tmp_name'];
@@ -48,6 +49,18 @@
                                 'img' => $picProfile,
                                 'msg' => $msg)
                             );
+
+                            //envoi de mail
+                            $message="
+                            Pseudo du participant : $pseudo
+                            Mail : $email
+                            Photo : http://127.0.0.1/PopArTech02/images/$picProfile
+                            Description : $msg
+                            ";
+                            $mailheader = "From:".$pseudo."<".$email.">\r\n";
+                            $recipient = "valentin.lemoual@gmail.com";
+                            mail($recipient, $subject, $message, $mailheader) or die("Error!");
+
                             // On redirige avec le message de succès
                             header('Refresh: 0; index.php?reg_err=success');die();
                         }else{ header('Location: index.php?reg_err=msg_length'); die();}
@@ -56,4 +69,9 @@
             }else{ header('Location: index.php?reg_err=pseudo_length'); die();}
         }else{ header('Location: index.php?reg_err=already'); die();}
     }
+
+
+
+
+
 
