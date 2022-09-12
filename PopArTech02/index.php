@@ -195,16 +195,16 @@
 				<form action="inscription_traitement.php" method="post" enctype="multipart/form-data">
 					<div class="field half first">
 						<label for="name">Pseudo<strong> *</strong></label>
-						<input type="text" name="pseudo" class="form-control" placeholder="Pseudo" required="required" autocomplete="off">
+						<input type="text" name="pseudo" class="form-control" placeholder="toto56" required="required" autocomplete="off">
 					</div>
 					<div class="field half">
 						<label for="email">Email<strong> *</strong></label>
-						<input type="email" name="email" class="form-control" placeholder="Email" required="required" autocomplete="off">
+						<input type="email" name="email" class="form-control" placeholder="toto@gmail.com" required="required" autocomplete="off">
 					</div>
 					<div class="row">
 						<div class="col-8">
 							<label for="message">Description<strong> *</strong></label>
-							<textarea type="message" name="message"  required="required" placeholder="..."></textarea>
+							<textarea type="message" name="message"  required="required" placeholder="Je me presente ..."></textarea>
 						</div>
 						<div class="col-4">
 							<label for="file" class="label-file">Choisir une image</label>
