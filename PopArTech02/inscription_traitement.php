@@ -40,15 +40,28 @@
                             move_uploaded_file($tmp_dir, $upload_dir.$picProfile);
 
                             // On insère dans la base de données
-                            $insert = $bdd->prepare('INSERT INTO utilisateurs(pseudo, email, ip, token, img, msg) VALUES(:pseudo, :email, :ip, :token, :img, :msg)');
+                            $insert = $bdd->prepare('INSERT INTO utilisateurs(pseudo, email, ip, token, img, msg,confirme) VALUES(:pseudo, :email, :ip, :token, :img, :msg,:confirme)');
                             $insert->execute(array(
                                 'pseudo' => $pseudo,
                                 'email' => $email,
                                 'ip' => $ip,
-                                'token' => bin2hex(openssl_random_pseudo_bytes(6)), // a enlever a mettre la description
+                                'token' => bin2hex(openssl_random_pseudo_bytes(6)),
                                 'img' => $picProfile,
-                                'msg' => $msg)
+                                'msg' => $msg,
+                                'confirme' => "1")
                             );
+
+                            ?>
+                                <h1 class="centre">En cour de traitement</h1>
+                                <style>
+                                .centre {
+                                    text-align: center;
+                                    margin-top: 20%;
+                                    }
+                                </style>
+                            <?php
+                            // On redirige avec le message de succès
+                            header('Refresh: 3; index.php?reg_err=success');
 
                             //envoi de mail
                             $message="
@@ -56,13 +69,14 @@
                             Mail : $email
                             Photo : http://127.0.0.1/PopArTech02/images/$picProfile
                             Description : $msg
+
+                            Souhaitez-vous qu'il soit afficher, si oui veuillez contacter l'administrateur du site ?
                             ";
                             $mailheader = "From:".$pseudo."<".$email.">\r\n";
                             $recipient = "valentin.lemoual@gmail.com";
                             mail($recipient, $subject, $message, $mailheader) or die("Error!");
+                            die();
 
-                            // On redirige avec le message de succès
-                            header('Refresh: 0; index.php?reg_err=success');die();
                         }else{ header('Location: index.php?reg_err=msg_length'); die();}
                     }else{ header('Location: index.php?reg_err=email'); die();}
                 }else{ header('Location: index.php?reg_err=email_length'); die();}

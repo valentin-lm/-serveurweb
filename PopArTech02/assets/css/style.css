@@ -999,7 +999,7 @@
 	.text-descri{
 		background-color: #FFF;
 	}
-	.test{
+	.profile{
   		position: fixed;
 		display: none;
 		top: 0;
@@ -1016,7 +1016,7 @@
 		box-shadow: 5px 0px 2px #000, -5px 0pc 2px #000;
 	}
 
-	.test h2{
+	.profile h2{
 		position: absolute;
 		width: 100%;
 		margin-top: 2.5em;
@@ -1026,7 +1026,7 @@
 		font-weight: 900;
 		text-transform: uppercase;
 	}
-	.test p{
+	.profile p{
 		position:absolute;
 		margin: 15em;
 		text-align: center;
@@ -1034,7 +1034,7 @@
 	}
 
 
-	.test:target {
+	.profile:target {
 		display: block;
 	  }
 

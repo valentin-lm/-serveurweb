@@ -14,7 +14,9 @@
 					<div class="alert alert-success">
 						<strong>Succès</strong> inscription réussie !
 					</div>
+
 				<?php
+				header('Refresh: 2; index.php');
 				break;
 				case 'msg_length':
 				?>
@@ -68,11 +70,10 @@
 		<title>PopExpo</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+		<link href="./stylesheet/bootstrap.min.css" media="all" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="assets/css/style.css" />
 	</head>
 	<body>
-
 	<!-- Header -->
 		<header id="header">
 			<div class="inner">
@@ -154,12 +155,15 @@
 							while($row=$stmt->fetch(PDO::FETCH_ASSOC))
 							{
 								extract($row);
-								?>
+
+								if(!$row['confirme'])//Vérification de l'inscrit
+								{
+									?>
 									<div class="col">
 										<img class="img-circle" src="./images/<?php echo $row['img']?>" alt="Pic 01" width="150" height="150">
 										<h3><?php echo $row['pseudo']?></h3>
 										<p><a class="bouton-perso" href="#view-write-<?php echo $row['token']?>">Voir Plus</a></p>
-											<a class="test"  id="view-write-<?php echo $row['token']?>" href="#three">
+											<a class="profile"  id="view-write-<?php echo $row['token']?>" href="#three">
 												<div class="text-descri"></div>
 													<h2><?php echo $row['pseudo']?></h2>
 													<p><?php echo $row['msg']?></p>
@@ -168,6 +172,11 @@
 											</a>
 									</div>
 								<?php
+								}
+								/* else {
+									echo "<h1 class='test01'>Les inscriptions pour PopExpo des artistes seront bientôt ouvertes !</h1>
+									<style>.test01 {text-align: center}</style>";
+								} */
 							}
 						}
 					?>
