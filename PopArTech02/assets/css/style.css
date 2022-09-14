@@ -358,10 +358,11 @@
 
 		/*margin-bottom: 1em;*/
 	}
-	.inner img{
+	.profile-img{
 		text-align:center;
 		margin:auto;
 		display:flex;
+		border-radius: 0.4em;
 	}
 	.inner h3{
 		text-align:center;
@@ -387,12 +388,6 @@
 		}
 
 	/*bootsrap avec titre*/
-		.bouton-perso{
-			align-items: center;
-			padding: 0.5em 1em;
-			border-radius: 4px;
-			background-color: #2195f3a2;
-		}
 		.wrapper a{
 			text-decoration: none;
 			color: #000;
@@ -401,11 +396,16 @@
 			font-size: 1.8em;
 			padding-top: 1em;
 		}
+		.profile-bouton{
+			align-items: center;
+			padding: 0.5em 1em;
+			border-radius: 4px;
+			background-color: #2195f3a2;
+		}
 
 	/*Afficher description bootsrap*/
-		.text-descri{
+		.profile .text{
 			background-color: #FFF;
-
 		}
 		.profile{
 			position: fixed;
@@ -421,7 +421,8 @@
 			margin: 0 15%;
 			width: 60em;
 			opacity: 40%;
-			box-shadow: 5px 0px 2px #000, -5px 0pc 2px #000;
+			border-radius: 0em;
+			box-shadow: 5px 0px 2px rgba(0, 0, 0, 0.500), -5px 0pc 2px rgba(0, 0, 0, 0.500);
 		}
 
 		.profile h2{
