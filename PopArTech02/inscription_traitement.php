@@ -30,10 +30,10 @@
 
         // Si la requete renvoie un 0 alors l'utilisateur n'existe pas
         if($row == 0){
-            if(strlen($pseudo) <= 100){ // On verifie que la longueur du pseudo <= 100
-                if(strlen($email) <= 100){ // On verifie que la longueur du mail <= 100
+            if(strlen($pseudo) <= 80){ // On verifie que la longueur du pseudo <= 80
+                if(strlen($email) <= 80){ // On verifie que la longueur du mail <= 80
                     if(filter_var($email, FILTER_VALIDATE_EMAIL)){ // Si l'email est de la bonne forme
-                        if(strlen($pseudo) <= 500){
+                        if(strlen($msg) <= 500){ // On verifie que la longueur du message <= 500
 
                             $ip = $_SERVER['REMOTE_ADDR'];
 
@@ -50,6 +50,17 @@
                                 $upload_dir='./images/';
                                 move_uploaded_file($tmp_dir, $upload_dir.$picProfile);
                             }
+                            $insert = $bdd->prepare('INSERT INTO utilisateurs(pseudo, email, ip, token, img, msg, confirme) VALUES(:pseudo, :email, :ip, :token, :img, :msg,:confirme)');
+                            $insert->execute(array(
+                                'pseudo' => $pseudo,
+                                'email' => $email,
+                                'ip' => $ip,
+                                'token' => bin2hex(openssl_random_pseudo_bytes(6)),
+                                'img' => $picProfile,
+                                'msg' => $msg,
+                                'confirme' => "1")
+                            );
+
                             ?>
                                 <h1 class="centre">En cour de traitement</h1>
                                 <style>
@@ -63,21 +74,9 @@
                             // On redirige avec le message de succès
                             header('Refresh: 3; index.php?reg_err=success');
 
-                            // On insère dans la base de données
-                            $insert = $bdd->prepare('INSERT INTO utilisateurs(pseudo, email, ip, token, img, msg,confirme) VALUES(:pseudo, :email, :ip, :token, :img, :msg,:confirme)');
-                            $insert->execute(array(
-                                'pseudo' => $pseudo,
-                                'email' => $email,
-                                'ip' => $ip,
-                                'token' => bin2hex(openssl_random_pseudo_bytes(6)),
-                                'img' => $picProfile,
-                                'msg' => $msg,
-                                'confirme' => "1")
-                            );
-
                             $message="
                                 <h1>Demander d'inscription a PopArTech</h1>
-                                <table cellspacing='0' style='width: 50%;'>
+                                <table cellspacing='0' style='width: 80%;'>
                                     <tr>
                                         <th>Name :</th><td>$pseudo</td>
                                     </tr>
