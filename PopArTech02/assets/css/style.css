@@ -342,21 +342,18 @@
 		margin-top: 4em;
 	}
 
-
-
 	.inner-categorie{
 		margin-top: 4em;
 		background: #6cc091;
 		padding: 2em 0;
 		color: #fff;
 	}
-	.inner-categorie h2{
+	.inner-categorie h2 {
 		color: #fff;
 	}
+	.inner-categorie a{
 
-
-
-
+	}
 
 	.inner {
 		max-width: 80em;     /*taille du bootstrap*/
@@ -931,7 +928,7 @@
 
 	#banner {
 		padding: 8em 0 18em 0;
-		background-image: url(../../images/banner.png);
+		background-image: url(../../images/bannier.png);
 		background-size: cover;
 		background-position: bottom;
 		background-attachment: fixed;
