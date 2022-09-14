@@ -351,16 +351,24 @@
 	.inner-categorie h2 {
 		color: #fff;
 	}
-	.inner-categorie a{
-
-	}
 
 	.inner {
 		max-width: 80em;     /*taille du bootstrap*/
-		margin: 4em auto; /*mettre une mmargin au centre*/
+		margin: 0em auto 4em; /*mettre une mmargin au centre*/
+
 		/*margin-bottom: 1em;*/
 	}
-
+	.inner img{
+		text-align:center;
+		margin:auto;
+		display:flex;
+	}
+	.inner h3{
+		text-align:center;
+	}
+	.inner p{
+		text-align:center;
+	}
 
 		@media screen and (max-width: 1280px) {
 
@@ -375,6 +383,69 @@
 			.inner {
 				max-width: 80%;
 			}
+
+		}
+
+	/*bootsrap avec titre*/
+		.bouton-perso{
+			align-items: center;
+			padding: 0.5em 1em;
+			border-radius: 4px;
+			background-color: #2195f3a2;
+		}
+		.wrapper a{
+			text-decoration: none;
+			color: #000;
+		}
+		.wrapper h1 {
+			font-size: 1.8em;
+			padding-top: 1em;
+		}
+
+	/*Afficher description bootsrap*/
+		.text-descri{
+			background-color: #FFF;
+
+		}
+		.profile{
+			position: fixed;
+			display: none;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 10006;
+			background-color: #FFf;
+		}
+		.img{
+			left: 0;
+			margin: 0 15%;
+			width: 60em;
+			opacity: 40%;
+			box-shadow: 5px 0px 2px #000, -5px 0pc 2px #000;
+		}
+
+		.profile h2{
+			position: absolute;
+			width: 100%;
+			margin-top: 2.5em;
+			text-align: center;
+			color: #000;
+			font-size: 3em;
+			font-weight: 900;
+			text-transform: uppercase;
+		}
+		.profile p{
+			position:absolute;
+			margin: 15em;
+			font-size: 1em;
+		}
+
+
+		.profile:target, boby{
+			display: block;
+			overflow-y: hidden;
+			overflow-x: hidden;
+
 
 		}
 
@@ -1066,69 +1137,7 @@
 			}
 
 		}
-/*bootsrap avec titre*/
-	.bouton-perso{
-		align-items: center;
-		padding: 0.5em 1em;
-		border-radius: 4px;
-		background-color: #2195f3a2;
-	}
-	.wrapper a{
-		text-decoration: none;
-		color: #000;
-	}
-	.wrapper h1 {
-		font-size: 1.8em;
-		padding-top: 1em;
-	}
-	.center{
-		align-content: center;
-	}
 
-
-/*Afficher description bootsrap*/
-	.text-descri{
-		background-color: #FFF;
-	}
-	.profile{
-  		position: fixed;
-		display: none;
-		top: 0;
-		width: 100%;
-		height: 100%;
-		z-index: 10006;
-		background-color: #FFf;
-	}
-	.img{
-		left: 0;
-		margin: 0 15%;
-		width: 60em;
-		opacity: 40%;
-		box-shadow: 5px 0px 2px #000, -5px 0pc 2px #000;
-	}
-
-	.profile h2{
-		position: absolute;
-		width: 100%;
-		margin-top: 2.5em;
-		text-align: center;
-		color: #000;
-		font-size: 3em;
-		font-weight: 900;
-		text-transform: uppercase;
-	}
-	.profile p{
-		position:absolute;
-		margin: 15em;
-		text-align: center;
-		font-size: 1em;
-	}
-
-
-	.profile:target {
-		display: block;
-		overflow: hidden;
-	  }
 
 /* Footer */
 

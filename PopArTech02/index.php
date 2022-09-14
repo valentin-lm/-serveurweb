@@ -71,7 +71,7 @@ if (isset($_GET['reg_err'])) {
 	<title>PopExpo</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link href="./stylesheet/bootstrap.min.css" media="all" rel="stylesheet" type="text/css" />
+	<link href="assets/stylesheet/bootstrap.min.css" media="all" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="assets/css/style.css"/>
 </head>
 <body>
@@ -170,7 +170,7 @@ if (isset($_GET['reg_err'])) {
 								{
 								?>
 								<div class="col col-sm">
-									<img class="img-circle" src="./images/<?php echo $row['img'] ?>" alt="Pic 01" width="150" height="150">
+									<img src="./images/<?php echo $row['img'] ?>" alt="Pic 01" width="150" height="150">
 									<h3><?php echo $row['pseudo'] ?></h3>
 									<p><a class="bouton-perso" href="#view-write-<?php echo $row['token'] ?>">Voir Plus</a></p>
 									<a class="profile" id="view-write-<?php echo $row['token'] ?>" href="#three">
