@@ -175,10 +175,11 @@ if (isset($_GET['reg_err'])) {
 									<h3><?php echo $row['pseudo'] ?></h3>
 									<p><a class="profile-bouton" href="#view-write-<?php echo $row['token'] ?>">Voir Plus</a></p>
 									<a class="profile" id="view-write-<?php echo $row['token'] ?>" href="#three">
-										<div class="text"></div>
-											<h2><?php echo $row['pseudo'] ?></h2>
-											<p><?php echo $row['msg'] ?></p>
-											<img class="img" src="./images/<?php echo $row['img'] ?>" alt="Pic 01">
+											<div class="test">
+												<h2><?php echo $row['pseudo'] ?></h2>
+												<p><?php echo $row['msg'] ?></p>
+												<img class="img" src="./images/<?php echo $row['img'] ?>" alt="Pic 01">
+											</div>
 										</div>
 									</a>
 
