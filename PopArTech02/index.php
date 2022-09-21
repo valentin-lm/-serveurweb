@@ -84,6 +84,7 @@ if (isset($_GET['reg_err'])) {
 				<a href="#acticle">Acticle</a>
 				<a href="#regle">Catégorie</a>
 				<a href="#footer">Inscription</a>
+				<!--<a href="#footer">Connection</a>-->
 			</nav>
 			<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
 		</div>
@@ -129,24 +130,24 @@ if (isset($_GET['reg_err'])) {
 		<div class="container">
 			<div class="row">
 				<div class="col">
-					<h2>Game</h2>
+					<h2>Game :</h2>
 					<p>Les diffrents jeux vidéo sont proposé comme Minecraft, Paint-Ball et Maker King si vous voulez en <a href="">ça savoir plus</a></p>
 				</div>
 				<div class="col">
-					<h2>Crepart</h2>
+					<h2>Crepart :</h2>
 					<p>C'est de la création de crepet personnalise comme chat, chien, si vous voulez en <a href=""> ça savoir plus</a></p>
 				</div>
 				<div class="col">
-					<h2>Cosplay</h2>
+					<h2>Cosplay :</h2>
 					<p>Ça consiste à revêtir l'apparence d'un personnage issu des mangas, de la science-fiction et des jeux vidéo si vous voulez <a href=""> savoir plus</a></p>
 				</div>
 				<div class="row">
 				<div class="col">
-					<h2>Dessin</h2>
+					<h2>Dessin :</h2>
 					<p>Des création de personnage, paysage, d'objet ou autre, si vous voulez en <a href=""> savoir plus</a></p>
 				</div>
 				<div class="col">
-					<h2>Photo</h2>
+					<h2>Photo :</h2>
 					<p>Representation d'un dessin par un photographie de vous même,j si voulez en <a href=""> savoir plus</a></p>
 				</div>
 				</div>
